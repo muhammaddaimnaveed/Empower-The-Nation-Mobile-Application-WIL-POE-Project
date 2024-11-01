@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 
+// This is 1 of 7 courses screen that provides users with the course information such as the courses description, image, fees, purpose and content.
+
 export default function Cooking({ navigation }) {
   return (
     <View style={styles.container}>
