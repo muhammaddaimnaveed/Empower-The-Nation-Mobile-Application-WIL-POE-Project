@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 
+// The About Us Screen provides users with information regarding Empoer The Nation.
+
 export default function OptionScreen({ navigation }) {
   return (
     <View style={styles.container}>
