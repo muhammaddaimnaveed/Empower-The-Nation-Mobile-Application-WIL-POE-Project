@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, TextInput, ScrollView, TouchableOpacity, Modal, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; 
 
+// The Apply Now Screen consists of a detailed contact form where users need to fill in their first name, last name, phone number, email address, select courses which calculate total fees with discounts, and submit their application. 
+
 const App: React.FC = () => {
     const navigation = useNavigation();
     
