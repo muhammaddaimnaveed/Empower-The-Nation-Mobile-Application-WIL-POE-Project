@@ -1,7 +1,7 @@
 import React from 'react';
 import {  StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native';
 
-
+// The Option Screen includes the About us button, View Courses button and the Apply Now button that users can choose from.
 export default function OptionScreen({ navigation }) {
   return (
     <View style={styles.container}>
