@@ -7,69 +7,9 @@ const App: React.FC = () => {
     
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    
-    const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
-    const [totalPrice, setTotalPrice] = useState(0);
-    const [discountPercentage, setDiscountPercentage] = useState(0);
-    const [modalVisible, setModalVisible] = useState(false);
 
-    const sixWeekCourses = [
-        { name: "Child Minding", price: 750 },
-        { name: "Cooking", price: 750 },
-        { name: "Garden Maintenance", price: 750 },
-    ];
-
-    const sixMonthCourses = [
-        { name: "First Aid", price: 1500 },
-        { name: "Sewing", price: 1500 },
-        { name: "Landscaping", price: 1500 },
-        { name: "Life Skills", price: 1500 },
-    ];
-
-    const handleCourseSelection = (course: string, price: number) => {
-        setSelectedCourses(prev => {
-            const isSelected = prev.includes(course);
-            const newSelection = isSelected 
-                ? prev.filter(c => c !== course)
-                : [...prev, course];
-
-            calculateTotal(newSelection);
-            return newSelection;
-        });
-    };
-
-    const calculateTotal = (selected: string[]) => {
-        if (selected.length === 0) {
-            setTotalPrice(0); 
-            setDiscountPercentage(0);
-            return;
-        }
-
-        const newTotal = selected.reduce((sum, course) => {
-            const courseData = [...sixWeekCourses, ...sixMonthCourses].find(c => c.name === course);
-            return sum + (courseData ? courseData.price : 0);
-        }, 0);
-
-        let discount = 0;
-        let discountPercentage = 0;
-
-        if (selected.length === 2) {
-            discountPercentage = 5;
-            discount = newTotal * 0.05; 
-        } else if (selected.length === 3) {
-            discountPercentage = 10;
-            discount = newTotal * 0.10; 
-        } else if (selected.length > 3) {
-            discountPercentage = 15;
-            discount = newTotal * 0.15; 
-        }
-
-        setTotalPrice(newTotal - discount);
-        setDiscountPercentage(discountPercentage);
-    };
+    // The Login Screen requires users to either login or create a new account in-order to proceed.
 
     return (
         <View style={styles.container}>
