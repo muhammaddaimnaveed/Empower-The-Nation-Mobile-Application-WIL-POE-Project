@@ -23,6 +23,8 @@ export default function HomeScreen({ navigation }) {
   );
 }
 
+/*
+The HomeScreen features the title "Empower The Nation" alongside motivational phrases aimed at inspiring users. It includes an image of graduating students and a "Next" button that navigates to the LoginScreen, encouraging engagement with the app. A copyright notice for 2024 is also displayed at the bottom.*/ 
 
 const styles = StyleSheet.create({
   container: {
