@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 
+// The View Courses Us Screen allows users to view through the different courses offered by Empower The Nation.
+
 export default function ViewCourses({ navigation }) {
   return (
     <View style={styles.container}>
